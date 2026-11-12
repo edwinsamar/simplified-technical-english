@@ -1,6 +1,6 @@
 ---
 name: simplified-technical-english
-description: Writes and rewrites text in Simplified Technical English (ASD-STE100), a controlled language for clear technical documentation. Use when the user asks for STE, Simplified Technical English, controlled language, or plain technical writing, and when the user asks to write, rewrite, review, or check technical documentation, procedures, manuals, instructions, warnings, or reports.
+description: Writes and rewrites text in Simplified Technical English (ASD-STE100), a controlled language for clear technical documentation. Use when the user asks for STE, Simplified Technical English, controlled language, or plain technical writing, and when the user asks to write, rewrite, review, or check technical documentation, procedures, manuals, instructions, warnings, reports, slide decks, or wiki pages.
 license: MIT for the text of this skill. The word list in references/word-list.md comes from the ASD-STE100 dictionary, which is the property of ASD. Refer to NOTICE.md.
 metadata:
   source-specification: ASD-STE100 Issue 7 (2017-01-25)
@@ -83,9 +83,14 @@ The two types have different limits. Do not mix the two types in one paragraph.
 - Start with a simple command or condition. Then give the risk.
 - Example: "WARNING: Do not touch the connector. The connector can have a dangerous voltage."
 
-## Step 6: Check your text
+## Step 6: Check your text before you publish it
 
-After you write, check your text. Do these steps:
+Write the text one time, in a source file.
+Do the check on that file.
+Publish the text, or build the deck, from that same file only when the check shows no errors.
+For slides, put each bullet, each table cell, and each speaker note on its own line in the source file.
+
+Do these steps:
 
 1. If you can run scripts, run: `python3 scripts/ste_check.py --mode <procedural|descriptive> <file>`.
 2. If you cannot run scripts, do a manual scan of the checklist below.
